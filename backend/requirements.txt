@@ -1,0 +1,21 @@
+# FastAPI & Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+python-dotenv>=1.0.0
+
+# LangGraph & LangChain
+langgraph>=0.4.0
+langchain-openai>=0.3.0
+langchain-core>=0.3.0
+
+# STT - Deepgram
+websockets>=15.0
+
+# TTS - ElevenLabs
+elevenlabs>=1.50.0
+
+# Tools
+duckduckgo-search>=7.0
+
+# Config
+pyyaml>=6.0

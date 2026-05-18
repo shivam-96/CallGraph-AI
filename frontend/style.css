@@ -1,0 +1,191 @@
+/* CallGraph AI — Minimal Dark UI */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #e0e0e0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #222;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.status.connected {
+    background: #0a2e1a;
+    color: #4ade80;
+}
+
+.status.disconnected {
+    background: #2e0a0a;
+    color: #f87171;
+}
+
+.status.connecting {
+    background: #2e2a0a;
+    color: #facc15;
+}
+
+/* Transcript Area */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#transcript-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 0;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 85%;
+    word-wrap: break-word;
+}
+
+.message.user {
+    background: #1a3a5c;
+    color: #93c5fd;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.message.assistant {
+    background: #1a1a2e;
+    color: #c4b5fd;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.message.system {
+    background: #1a1a1a;
+    color: #666;
+    align-self: center;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Controls */
+#controls {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#talk-btn {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #333;
+    background: #1a1a1a;
+    color: #888;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: all 0.15s ease;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#talk-btn:not(:disabled):hover {
+    border-color: #4ade80;
+    color: #4ade80;
+}
+
+#talk-btn.recording {
+    border-color: #f87171;
+    background: #2e0a0a;
+    color: #f87171;
+    box-shadow: 0 0 30px rgba(248, 113, 113, 0.2);
+}
+
+#talk-btn.processing {
+    border-color: #facc15;
+    color: #facc15;
+    opacity: 0.7;
+    cursor: wait;
+}
+
+#talk-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+#btn-icon {
+    font-size: 28px;
+}
+
+#btn-text {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+#timing-info {
+    font-size: 11px;
+    color: #555;
+    text-align: center;
+}
+
+/* Scrollbar */
+#transcript-area::-webkit-scrollbar {
+    width: 4px;
+}
+#transcript-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+#transcript-area::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 2px;
+}

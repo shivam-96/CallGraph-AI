@@ -1,0 +1,36 @@
+# ===== CONTEXT FILE (WHAT the agent knows/does) =====
+# This file defines domain knowledge, tools, and strategies.
+# Swap this file to change what the agent knows.
+
+domain_knowledge:
+  company_name: "TechFlow Solutions"
+  product_info: >
+    TechFlow is a SaaS platform that helps teams manage projects,
+    track tasks, and collaborate in real-time. Key features include
+    Kanban boards, Gantt charts, time tracking, and AI-powered
+    task prioritization. Plans start at $9/user/month.
+  target_audience: "Small to medium businesses and startups"
+  usp: "AI-powered task prioritization that saves teams 5+ hours per week"
+
+tools_instructions:
+  - tool: "web_search"
+    when_to_use: "When the customer asks about something you don't have info on"
+  - tool: "calculator"
+    when_to_use: "When pricing calculations or comparisons are needed"
+  - tool: "get_datetime"
+    when_to_use: "When the customer asks about current date or time"
+
+conversation_strategies:
+  - "Start by understanding the customer's current pain points."
+  - "Relate product features to their specific needs."
+  - "If they object on price, highlight the ROI and time savings."
+  - "Offer a free trial when the customer shows interest."
+
+tips:
+  - "Mention the 14-day free trial early in the conversation."
+  - "If they mention a competitor, acknowledge it and highlight TechFlow's unique AI features."
+
+constraints:
+  - "Do not make up pricing or features."
+  - "Do not promise custom features without checking."
+  - "Stay within the scope of TechFlow products."
