@@ -73,3 +73,17 @@ If you are a developer looking to spin up the environment quickly:
 
 3. **Interact**:
    Open `http://localhost:8000` in your browser, allow microphone access, and hold the button to talk to the AI.
+
+---
+
+## 🔮 Future Roadmap & Pending Features
+
+The following features are planned for future releases to make CallGraph AI completely autonomous, highly scalable, and production-ready for telephony:
+
+- **Frontend React.js Overhaul**: Replace the current vanilla JS preview with a premium, component-driven React dashboard. This will include live transcript visualizations, latency metrics, and personality toggles.
+- **100% Local AI Integration**: Swap out cloud dependencies (OpenAI, Deepgram) for entirely local, open-source models (e.g., Llama 3, Whisper.cpp, Coqui TTS) for maximum privacy and zero API costs.
+- **Dynamic Identity & Context Switching**: Build UI controls to instantly swap the agent's personality and domain knowledge mid-conversation (e.g., switching from a "B2B Sales Rep" to a "Tech Support Agent").
+- **Telephony (VoIP) Integration**: Integrate with Twilio (ConversationRelay) and SIP trunks so the voice agent can place and receive actual phone calls.
+- **Voice Activity Detection (VAD)**: Implement advanced client-side silence skipping to only process active speech, significantly reducing token usage and STT costs.
+- **Augmented Memory / Long-term State**: Use LangGraph's persistent state store to allow the agent to remember user names, preferences, and past conversations across multiple sessions.
+- **Emotional & Expressive TTS**: Upgrade the TTS pipeline to dynamically adapt voice styles (excited, empathetic, serious) based on the conversational context.
